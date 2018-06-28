@@ -1,0 +1,224 @@
+@font-face {
+  font-family: Quicksand;
+  src: url(../assets/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: Hellovetica;
+  src: url(../assets/fonts/hellovetica.ttf);
+}
+
+.about {
+  position: relative;
+  top: calc(50% - 80px);
+  padding: 0 10px
+}
+
+.about p {
+  margin-left: 15px;
+}
+
+.dev {
+  background: url(../assets/img/dev.gif) 0 0;
+}
+
+.gamer {
+  background: url(../assets/img/gamer.gif) 0 0;
+}
+
+.art {
+  background: url(../assets/img/art.gif) 0 0;
+}
+
+.music {
+  background: url(../assets/img/music.gif) 0 0;
+}
+
+.about-icon {
+  display: block;
+  height: 72px;
+  width: 72px;
+  margin: 0 auto;
+  background-size: 144px 72px
+}
+
+.about-item {
+  display: inline-block;
+  width: calc(25% - 30px);
+  padding: 15px;
+}
+
+.container {
+  padding: 20px 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content {
+  -moz-transition: height .5s ease-in-out, padding .5s ease-in-out;
+	-webkit-transition: height .5s ease-in-out, padding .5s ease-in-out;
+	transition: height .5s ease-in-out, padding .5s ease-in-out;
+  padding: 0 10px;
+  height: 0;
+  width: 450px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.content-block {
+  opacity: 0;
+  height: fit-content;
+  -moz-transition: opacity .5s ease-in-out;
+	-webkit-transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out;
+}
+
+.hidden {
+  visibility: hidden;
+  height:0
+}
+
+#main {
+	margin-top: calc(50vh - 105px);
+  -moz-transition: margin-top .5s ease-in-out;
+	-webkit-transition: margin-top .5s ease-in-out;
+	transition: margin-top .5s ease-in-out;
+}
+
+.main {
+  font-family: 'Quicksand', sans-serif;
+	width: fit-content;
+}
+
+.name {
+	text-align: center;
+  margin: 0
+}
+
+.name a {
+  color: black;
+  text-decoration: none
+}
+
+.nav {
+  width: fit-content
+}
+
+.nav-button {
+  margin: 0px 35px;
+  padding: 7px 9px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+
+  font-size: 21px;
+
+  -moz-transition: border .25s ease-in-out;
+	-webkit-transition: border .25s ease-in-out;
+	transition: border .25s ease-in-out;
+}
+
+.nav-button:visited {
+  color: black
+}
+
+.nav-button:hover {
+  color: #aaa
+}
+
+.nav-button:active {
+  color: black
+}
+
+.portfolio {
+  position: relative;
+  top: calc(50% - 81px);
+  padding: 0 10px
+}
+
+.portfolio-item {
+  display: inline-block;
+  width: calc(33% - 20px);
+  padding: 10px;
+}
+
+.BB {
+  background: url(../assets/img/BB.gif) 0 0;
+}
+
+.dh {
+  background: url(../assets/img/dh.gif) 0 0;
+}
+
+.sg {
+  background: url(../assets/img/sg.gif) 0 0;
+}
+
+.portfolio-icon {
+  display: block;
+  height: 96px;
+  width: 96px;
+  margin: 0 auto;
+  background-size: 192px 96px
+}
+
+.portfolio-icon:hover {
+  background-position: -96px 0;
+}
+
+.portfolio-text {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px 0
+}
+
+.active {
+  border: 1px solid black
+}
+
+.github {
+  background: url(../assets/img/github.png) 0 0;
+}
+
+.linkedin {
+  background: url(../assets/img/linkedin.png) 0 0;
+}
+
+.instagram {
+  background: url(../assets/img/instagram.png) 0 0;
+}
+
+.mail {
+  background: url(../assets/img/mail.png) 0 0;
+}
+
+.social:hover {
+  background-position: -48px 0;
+}
+
+.social-container {
+  position: relative;
+  top: calc(50% - 24px);
+  padding: 0 20px
+}
+
+.social {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 0 calc(12.5% - 24px);
+  background-size: 96px 48px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 36px
+}
+
+ul {
+  margin: 0
+}
+
+p {
+  margin: 0
+}
