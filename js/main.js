@@ -1,32 +1,10 @@
-function transitionEndEventName () {
-    var i,
-        undefined,
-        el = document.createElement('div'),
-        transitions = {
-            'transition':'transitionend',
-            'OTransition':'otransitionend',  // oTransitionEnd in very old Opera
-            'MozTransition':'transitionend',
-            'WebkitTransition':'webkitTransitionEnd'
-        };
-
-    for (i in transitions) {
-        if (transitions.hasOwnProperty(i) && el.style[i] !== undefined) {
-            return transitions[i];
-        }
-    }
-
-    //TODO: throw 'TransitionEnd event is not supported in this browser';
-}
-
 document.addEventListener("DOMContentLoaded", function(event) {
   let main = document.getElementById("main");
   let home = document.getElementById("home");
 
   let staticHeight = 125
 
-  let buttons = ["about", "portfolio", "social"]
-
-  let transitionEnd = transitionEndEventName();
+  let buttons = ["portfolio", "social"] //"about", 
 
   let clearNav = function() {
     for(let i = 0; i < buttons.length; i++) {
@@ -70,5 +48,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
   }
 
-  reset(0);
+  reset();
 });
