@@ -158,6 +158,10 @@ a {
   background: url(../assets/img/sg.gif) 0 0;
 }
 
+.bf {
+  background: url(../assets/img/boffee.gif) 0 0;
+}
+
 .portfolio-icon {
   display: block;
   height: 96px;

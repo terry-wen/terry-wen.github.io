@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   let staticHeight = 125
 
-  let buttons = ["portfolio", "social"] //"about", 
+  let buttons = ["about", "blog", "portfolio", "social"];
 
   let clearNav = function() {
     for(let i = 0; i < buttons.length; i++) {
@@ -31,8 +31,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     //document.getElementById("content").style.height = document.getElementById(section).clientHeight + "px"
     document.getElementById("content").style.height = `${staticHeight}px`
     document.getElementById("content").style.padding = "20px 10px"
+    main.style.marginTop = '0';
     //recenter(document.getElementById(section).clientHeight)
-    recenter(staticHeight)
+    //recenter(staticHeight)
     document.getElementById(section).style.opacity = "1.0"
     document.getElementById(section + "-link").classList.add("active")
   }
