@@ -34,15 +34,14 @@
   font-size: 18px; }
   .content-block {
     opacity: 0;
-    -moz-transition: opacity .3s ease-in-out;
-    -webkit-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out;
+    -moz-transition: height .5s ease-in-out, opacity .3s ease-in-out;
+    -webkit-transition: height .5s ease-in-out, opacity .3s ease-in-out;
+    transition: height .5s ease-in-out, opacity .3s ease-in-out;
     position: relative; }
 
 .hidden {
   display: none;
-  visibility: hidden;
-  height: 0; }
+  visibility: hidden; }
 
 .main {
   font-family: 'Quicksand', sans-serif;
@@ -61,7 +60,6 @@ a {
   text-decoration: none; }
 
 html {
-  overflow: auto;
   /* Hide scrollbar for IE and Edge */
   -ms-overflow-style: none;
   /* Hide scrollbar for Firefox */

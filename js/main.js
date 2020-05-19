@@ -51,7 +51,7 @@ let makeActive = function (section) {
   }
   setTimeout(() => {
     document.getElementById(section).style.opacity = "1.0"
-  }, 10);
+  }, 200);
 }
 
 window.addEventListener("resize", recenter);
