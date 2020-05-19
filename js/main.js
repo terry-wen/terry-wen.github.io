@@ -1,51 +1,83 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-  let main = document.getElementById("main");
-  let home = document.getElementById("home");
+let main = document.getElementById("main");
+let home = document.getElementById("home");
+let content = document.getElementById("content");
 
-  let staticHeight = 125
+let buttons = ["about", "blog", "portfolio"];
+let active = null;
 
-  let buttons = ["about", "blog", "portfolio", "social"];
+let vh = function (v) {
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  return (v * h) / 100;
+}
 
-  let clearNav = function() {
-    for(let i = 0; i < buttons.length; i++) {
-      document.getElementById("nav").children[i].classList.remove("active");
+let clearNav = function () {
+  for (let i = 0; i < buttons.length; i++) {
+    if (document.getElementById("nav").children[i].children[0].classList.contains("active")) {
+      document.getElementById("nav").children[i].children[0].classList.remove("active");
       document.getElementById("content").children[i].style.opacity = "0"
-      document.getElementById("content").children[i].classList.add("hidden");
+      setTimeout(() => {
+        document.getElementById("content").children[i].classList.add("hidden");
+      }, 300);
     }
   }
+  active = null;
+}
 
-  let reset = function() {
-      clearNav();
-      document.getElementById("content").style.height = "0"
-      document.getElementById("content").style.padding = "0 10px"
-      recenter(0);
+let recenter = function () {
+  let mainHeight = !!active ? 900 : main.clientHeight; //TODO: make default value adjustable
+  if (!!active) {
+    content.style.height = `fit-content`
+    content.style.padding = "20px 10px"
+  } else {
+    content.style.height = `0`
+    content.style.padding = "0px 10px"
   }
+  let margin = Math.max(0, vh(50) - mainHeight / 2)
+  main.style.marginTop = `${margin}px`
+}
 
-  let recenter = function(contentHeight) {
-    let mainHeight = contentHeight + document.getElementById("title").clientHeight + document.getElementById("nav").clientHeight
-    main.style.marginTop = `calc(50vh - ${mainHeight / 2}px - 20px)`
+let reset = function () {
+  clearNav();
+  setTimeout(recenter, 300);
+}
+
+let makeActive = function (section) {
+  wasActive = !!active
+  active = section
+  document.getElementById(section).classList.remove("hidden")
+  document.getElementById(section + "-link").classList.add("active")
+  if (!wasActive) {
+    setTimeout(recenter, 10);
   }
-
-  let makeActive = function(section) {
-    document.getElementById(section).classList.remove("hidden")
-    //document.getElementById("content").style.height = document.getElementById(section).clientHeight + "px"
-    document.getElementById("content").style.height = `${staticHeight}px`
-    document.getElementById("content").style.padding = "20px 10px"
-    main.style.marginTop = '0';
-    //recenter(document.getElementById(section).clientHeight)
-    //recenter(staticHeight)
+  setTimeout(() => {
     document.getElementById(section).style.opacity = "1.0"
-    document.getElementById(section + "-link").classList.add("active")
-  }
+  }, 200);
+}
 
-  home.addEventListener("click", function(event) {
+window.addEventListener("resize", recenter);
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  main = document.getElementById("main");
+  home = document.getElementById("home");
+  content = document.getElementById("content");
+
+  home.addEventListener("click", function (event) {
     reset();
   });
 
-  for(let i = 0; i < buttons.length; i++) {
-    document.getElementById(buttons[i] + "-link").addEventListener("click", function(event) {
-      clearNav();
-      makeActive(buttons[i]);
+  for (let i = 0; i < buttons.length; i++) {
+    document.getElementById(buttons[i] + "-link").addEventListener("click", function (event) {
+      let fadeTimeout = 0
+      if (active) {
+        if (active === buttons[i]) {
+          return
+        }
+        clearNav();
+        fadeTimeout = 300
+      }
+      setTimeout(() => {
+        makeActive(buttons[i]);
+      }, fadeTimeout);
     });
   }
 
