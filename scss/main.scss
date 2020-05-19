@@ -47,9 +47,9 @@
 
     &-block {
         opacity: 0;
-        -moz-transition: opacity .3s ease-in-out;
-        -webkit-transition: opacity .3s ease-in-out;
-        transition: opacity .3s ease-in-out;
+        -moz-transition: height .5s ease-in-out, opacity .3s ease-in-out;
+        -webkit-transition: height .5s ease-in-out, opacity .3s ease-in-out;
+        transition: height .5s ease-in-out, opacity .3s ease-in-out;
         position: relative;
     }
 }
@@ -80,7 +80,6 @@ a {
 }
 
 html {
-    overflow: auto;
     /* Hide scrollbar for IE and Edge */
     -ms-overflow-style: none;
     /* Hide scrollbar for Firefox */
