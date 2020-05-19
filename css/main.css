@@ -81,6 +81,7 @@ html {
     text-decoration: none;
     display: block;
     width: fit-content;
+    width: -moz-fit-content;
     font-size: 21px;
     -moz-transition: border .25s ease-in-out;
     -webkit-transition: border .25s ease-in-out;
