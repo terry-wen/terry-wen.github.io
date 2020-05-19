@@ -14,9 +14,9 @@ let clearNav = function () {
   for (let i = 0; i < buttons.length; i++) {
     if (document.getElementById("nav").children[i].children[0].classList.contains("active")) {
       document.getElementById("nav").children[i].children[0].classList.remove("active");
-      document.getElementById("content").children[i].style.opacity = "0"
+      content.children[i].style.opacity = "0"
       setTimeout(() => {
-        document.getElementById("content").children[i].classList.add("hidden");
+        content.children[i].classList.add("hidden");
       }, 300);
     }
   }
@@ -24,21 +24,21 @@ let clearNav = function () {
 }
 
 let recenter = function () {
-  let mainHeight = !!active ? 900 : main.clientHeight; //TODO: make default value adjustable
   if (!!active) {
-    content.style.height = `fit-content`
+    content.style.height = `600px`;
     content.style.padding = "20px 10px"
   } else {
     content.style.height = `0`
     content.style.padding = "0px 10px"
   }
+  let mainHeight = !!active ? 900 : 217; //TODO: make default value adjustable
   let margin = Math.max(0, vh(50) - mainHeight / 2)
-  main.style.marginTop = `${margin}px`
+  main.style.top = `${margin}px`
 }
 
-let reset = function () {
+let reset = function (delay) {
   clearNav();
-  setTimeout(recenter, 300);
+  setTimeout(recenter, delay);
 }
 
 let makeActive = function (section) {
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   content = document.getElementById("content");
 
   home.addEventListener("click", function (event) {
-    reset();
+    reset(300);
   });
 
   for (let i = 0; i < buttons.length; i++) {
@@ -81,5 +81,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  reset();
+  reset(0);
 });
