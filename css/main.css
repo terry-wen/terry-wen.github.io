@@ -153,17 +153,23 @@ ul {
 .climb {
   background-image: url(../assets/img/climbing.png); }
 
-.bb {
-  background-image: url(../assets/img/bb.gif); }
+.battery-boy {
+  background-image: url(../assets/img/battery-boy.gif); }
 
-.dh {
-  background-image: url(../assets/img/dh.gif); }
+.desert-hacks {
+  background-image: url(../assets/img/desert-hacks.gif); }
 
-.sg {
-  background-image: url(../assets/img/sg.gif); }
+.study-genie {
+  background-image: url(../assets/img/study-genie.gif); }
 
-.bf {
-  background-image: url(../assets/img/bf.gif); }
+.boffee {
+  background-image: url(../assets/img/boffee.gif); }
+
+.reality-blue {
+  background-image: url(../assets/img/reality-blue.gif); }
+
+.qwq {
+  background-image: url(../assets/img/qwq.gif); }
 
 .active {
   border: 1px solid black; }
