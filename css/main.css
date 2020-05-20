@@ -136,19 +136,25 @@ ul {
   margin: 0; }
 
 .dev {
-  background-image: url(../assets/img/dev.gif); }
+  background-image: url(../assets/img/dev.png); }
 
 .gamer {
-  background-image: url(../assets/img/gamer.gif); }
+  background-image: url(../assets/img/gamer.png); }
 
 .art {
-  background-image: url(../assets/img/art.gif); }
+  background-image: url(../assets/img/art.png); }
 
 .music {
-  background-image: url(../assets/img/music.gif); }
+  background-image: url(../assets/img/music.png); }
 
-.BB {
-  background-image: url(../assets/img/BB.gif); }
+.cook {
+  background-image: url(../assets/img/cooking.png); }
+
+.climb {
+  background-image: url(../assets/img/climbing.png); }
+
+.bb {
+  background-image: url(../assets/img/bb.gif); }
 
 .dh {
   background-image: url(../assets/img/dh.gif); }
@@ -170,6 +176,9 @@ ul {
 
 .instagram {
   background-image: url(../assets/img/instagram.png); }
+
+.twitter {
+  background-image: url(../assets/img/twitter.png); }
 
 .mail {
   background-image: url(../assets/img/mail.png); }
