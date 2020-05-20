@@ -62,7 +62,6 @@
 .main {
     font-family: 'Quicksand', sans-serif;
     position: relative;
-    top: calc(50vh - 110px);
     -moz-transition: top .5s ease-in-out;
     -webkit-transition: top .5s ease-in-out;
     transition: top .5s ease-in-out;
@@ -75,7 +74,11 @@
 
 a {
     color: black;
-    text-decoration: none
+    text-decoration: none;
+
+    &:hover {
+        color: #0099ff;
+    }
 }
 
 html {
@@ -120,7 +123,7 @@ html {
         }
 
         &:hover {
-            color: #aaa;
+            color: #0099ff;
         }
 
         &:active {
@@ -188,6 +191,10 @@ h1 {
 p,
 ul {
     margin: 0
+}
+
+#title:hover {
+    color: black;
 }
 
 

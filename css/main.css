@@ -46,7 +46,6 @@
 .main {
   font-family: 'Quicksand', sans-serif;
   position: relative;
-  top: calc(50vh - 110px);
   -moz-transition: top .5s ease-in-out;
   -webkit-transition: top .5s ease-in-out;
   transition: top .5s ease-in-out; }
@@ -58,6 +57,8 @@
 a {
   color: black;
   text-decoration: none; }
+  a:hover {
+    color: #0099ff; }
 
 html {
   /* Hide scrollbar for IE and Edge */
@@ -90,7 +91,7 @@ html {
     .nav-button:visited {
       color: black; }
     .nav-button:hover {
-      color: #aaa; }
+      color: #0099ff; }
     .nav-button:active {
       color: black; }
 
@@ -134,6 +135,9 @@ h1 {
 p,
 ul {
   margin: 0; }
+
+#title:hover {
+  color: black; }
 
 .dev {
   background-image: url(../assets/img/dev.png); }
