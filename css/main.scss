@@ -130,6 +130,10 @@ ul {
     }
 }
 
+a.home:hover {
+    color: $reality-blue;
+}
+
 .nav {
     @include width-fit-content();
 
