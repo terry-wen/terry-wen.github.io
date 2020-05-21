@@ -1,7 +1,0 @@
----
-layout: post
-title:  "test post please ignore"
-date:   2014-12-16 21:41:04 -0700
-tags:   test
----
-test post please ignore
