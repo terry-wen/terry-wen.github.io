@@ -21,16 +21,15 @@ The only thing missing from my static site was the ability to dynamically add bl
 
 After that, some code cleanup was in order. Converting CSS to SCSS was simple enough, but I decided to leave things even simpler in the fear that I would break something if a single tag were to get reordered incorrectly, so I primarily just nested styling and spammed [&s](https://css-tricks.com/the-sass-ampersand/) wherever I could. That's what using Sass is, right? I also added some variables to store my color theme and followed some of these [mixin tips](https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b) for further optimization. For my JS: I knew the code itself was going to be a bit hacky, as I had to add a number of manual delays to make sure my CSS transitions didn't visually conflict with one another, but the functions were relatively short and the bulk of my cleanup was ensuring each line was properly semicolon'd and all strings were using the same quotation symbols. Modulizing my HTML was simple enough as well, simply splitting up the components, creating a general default.html with my shared headers and reusing code where practical. All of this was done in small increments, double checking my site still looked correct between each iteration, in order to avoid the hassle of having to roll back a ton of changes to figure out what went wrong.
 
-At this point, I decided to push this Jekyll-powered version of my site live, while its technically still themeless.
+At this point, I decided to push this Jekyll-powered version of my site live, while its technically still themeless. I had to do some Github-pages-specific tweaking here, and I also pushed an extra branch to maintain my pre-Jekyll site in case I broke something (Note to Github: why can't pages run off a different branch than master???). 
 
 ## WORK IN PROGRESS
 
 * Cleaning things out of template
 * Cleaning template files out of site repository
-* Add SEO meta tags
 
 ## FUTURE WORK
 - Add pagination to projects
 - Further standardize components
 - Add better post tag/category functionality
-- firefox is still kinda glitchy
+- Firefox is still kinda glitchy
