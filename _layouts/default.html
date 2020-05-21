@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% assign title = page.title | default: site.title | escape %}
+	<title>{{ title }}</title>
+	<link rel="icon" type="image/png" href="/assets/img/favicon.ico">
+	<link rel="stylesheet" href="/css/main.css">
+</head>
+
+{{ content }}
+
+</html>
