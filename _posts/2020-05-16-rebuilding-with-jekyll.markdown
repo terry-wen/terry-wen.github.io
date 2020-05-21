@@ -1,0 +1,36 @@
+---
+layout: post
+title:  "Rebuilding my site with Jekyll - WIP"
+date:   2020-05-16 21:41:04 -0700
+tags:   development
+---
+**Hello World!** (sorry, I had to)
+
+This post is a product of a combination of a variety of firsts, from my first attempt at blogging to my first time using Jekyll and also my first attempt at developing my own theme. First and foremost, this project is not meant to be an optimized, perfectly developed experience; everything I've put into this site/template are purely for fun and my own experimentation. After making the (brave) decision to scrap my minimalist barebones personal site, I wanted to try something new and gain some "trendier" development skills. My front-end experience is lacking anyway and I thought this could be fun. I'll be using this blog post as both test content for the site/theme and a log of my own learning process.
+
+Why do I want to create my own theme? A few reasons:
+- To better understand the inner workings of Jekyll
+- To flex my own creative muscles (or to discover my lack thereof)
+- Perhaps most honestly, I may be too picky and too lazy to browse through a few hundred existing themes only to not really be satisfied with what I decide on. It may be more practical to just pick one as a template and build off of it on my own, but if I'm going to end up frankensteining things together anyway, I might as well start from scratch and customize to my fullest
+
+Ramblings aside, after installing [Jekyll](https://jekyllrb.com/docs/) and messing around with a sample site, I found this [tutorial](https://www.siteleaf.com/blog/making-your-first-jekyll-theme-part-1/) and started following it to get my basic gem set up. I wanted a simple name to represent what I wanted the theme to be, so I (unoriginally) named it after a [song](https://www.youtube.com/watch?v=3b6UvRIsXvQ) I was currently listening to. (Side note: make sure your gem name specifies that its a Jekyll theme; I forgot to do so and had to go back and rename things). After some further experimentation with Jekyll and gradually understanding its workings, I realized I could just use it to optimize my site as it currently was, and I could take the common elements and generate a template out of it. I won't try and say this was an ideal or optimal solution, but with my limited web dev experience in recent years, it felt cool to learn and try something new. The simplest way to start things out was to directly import all of my HTML/CSS/JS, and from there see how things could be refactored and reorganized.
+
+I hit sort of a creative block at this point as I tried to reevaluate the visual design of my website. I realized I kind of dug myself into a corner as well with the naming of this theme (as I should now expect to make blue an integral color) and in general was not satisfied with my visual experiments (in the end, I decided there was no point to being so particular about the name and was [satisifed](https://gph.is/1eRp7Rk) with my minimal use of the color). After trying multiple approaches to split my site into static pages, I decided to revert the bulk of my changes and keep my current dynamic one-page layout, just slightly altered so I could fit more content. I also decided that refactoring and making use of Jekyll would have to come later; my priority was finish adding content I wanted to my and later on work on optimizations. As such, I returned to my old static version of the site and first completed my redesign, sans Jekyll. This took longer than anticipated, as I had to create many more custom assets for my site and deal with responsive design issues (I forgot how hacky CSS truly is... and how much a pain testing across browsers is. Proper front-end devs, please don't be upset with me), but in the end I was very happy with what I ended up with.
+
+The only thing missing from my static site was the ability to dynamically add blog posts, which I decided to leave until the migration step. I will admit here that out of stubbornness instead of looking for a proper tutorial, I decided to Frankenstein a few things together from observations of existing templates (shout-out to the Jekyll default [minima](https://github.com/jekyll/minima) and another theme called [whiteglass](http://jekyllthemes.org/themes/whiteglass/)). It was at this point I realized it wasn't really within my current interests and free time to develop a truly flexible and reusable theme for others to use, and I briefly pondered the purpose of this whole experiment and why I chose to create a brand new template in the first place. Accounting for other developers' preferences and requirements would also be difficult, especially with my limited experience in this area of development. Eventually, I moved past it, realizing that all of this was for myself, and if my template was nice enough and I had the motivation I could always update it in the future to make it more practical. Existential questioning aside, looking into the code of these templates helped me understand why Jekyll was so useful; almost remnant of PHP, but also not nearly as unappealing. I loved how cleanly it built things into basic HTML/CSS while also remaining relatively intuitive to the developer. With these references, I set up my blog section using the [paginate plugin](https://jekyllrb.com/docs/pagination/) (somewhat lazily opting for a single archive rather than a fully paginated list of posts), along with a basic post template which you should be seeing as you read this post.
+
+After that, some code cleanup was in order. Converting CSS to SCSS was simple enough, but I decided to leave things even simpler in the fear that I would break something if a single tag were to get reordered incorrectly, so I primarily just nested styling and spammed [&s](https://css-tricks.com/the-sass-ampersand/) wherever I could. That's what using Sass is, right? I also added some variables to store my color theme and followed some of these [mixin tips](https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b) for further optimization. For my JS: I knew the code itself was going to be a bit hacky, as I had to add a number of manual delays to make sure my CSS transitions didn't visually conflict with one another, but the functions were relatively short and the bulk of my cleanup was ensuring each line was properly semicolon'd and all strings were using the same quotation symbols. Modulizing my HTML was simple enough as well, simply splitting up the components, creating a general default.html with my shared headers and reusing code where practical. All of this was done in small increments, double checking my site still looked correct between each iteration, in order to avoid the hassle of having to roll back a ton of changes to figure out what went wrong.
+
+At this point, I decided to push this Jekyll-powered version of my site live, while its technically still themeless.
+
+## WORK IN PROGRESS
+
+* Cleaning things out of template
+* Cleaning template files out of site repository
+* Add SEO meta tags
+
+## FUTURE WORK
+- Add pagination to projects
+- Further standardize components
+- Add better post tag/category functionality
+- firefox is still kinda glitchy

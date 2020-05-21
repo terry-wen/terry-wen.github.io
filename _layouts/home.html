@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<body>
+	<div id="main" class="container main">
+		<div id="title" class="container">
+			<h1 class="name"><a href="#" id="home">Terry Wen</a></h1>
+		</div>
+		<div id="nav" class="container nav">
+			<div class="nav-button-wrapper"><a id="about-link" href="#about" class="nav-button">about</a></div>
+			<div class="nav-button-wrapper"><a id="blog-link" href="#blog" class="nav-button">blog</a></div>
+			<div class="nav-button-wrapper"><a id="portfolio-link" href="#portfolio" class="nav-button">projects</a>
+			</div>
+		</div>
+		<div id="content" class="content">
+            {% include about.html %}
+            {% include blog.html %}
+            {% include projects.html %}
+        </div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
