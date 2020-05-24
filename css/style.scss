@@ -1,0 +1,11 @@
+---
+---
+@import 'reality-blue';
+@import 'icons';
+
+// Set up icon types
+{% for iconType in site.icons %}
+.{{ iconType.name }} {
+    @include item({{ iconType.size }}, {{ iconType.perRow }})
+}
+{% endfor %}

@@ -21,15 +21,18 @@ The only thing missing from my static site was the ability to dynamically add bl
 
 After that, some code cleanup was in order. Converting CSS to SCSS was simple enough, but I decided to leave things even simpler in the fear that I would break something if a single tag were to get reordered incorrectly, so I primarily just nested styling and spammed [&s](https://css-tricks.com/the-sass-ampersand/) wherever I could. That's what using Sass is, right? I also added some variables to store my color theme and followed some of these [mixin tips](https://medium.com/@justinbrazeau/10-useful-sass-mixins-for-automation-833cdee9d69b) for further optimization. For my JS: I knew the code itself was going to be a bit hacky, as I had to add a number of manual delays to make sure my CSS transitions didn't visually conflict with one another, but the functions were relatively short and the bulk of my cleanup was ensuring each line was properly semicolon'd and all strings were using the same quotation symbols. Modulizing my HTML was simple enough as well, simply splitting up the components, creating a general default.html with my shared headers and reusing code where practical. All of this was done in small increments, double checking my site still looked correct between each iteration, in order to avoid the hassle of having to roll back a ton of changes to figure out what went wrong.
 
-At this point, I decided to push this Jekyll-powered version of my site live, while its technically still themeless. I had to do some Github-pages-specific tweaking here, and I also pushed an extra branch to maintain my pre-Jekyll site in case I broke something (Note to Github: why can't pages run off a different branch than master???). 
+Before moving on from here, I decided to push this Jekyll-powered version of my site live, while its technically still themeless. I had to do some Github-pages-specific tweaking here, and I also pushed an extra branch to maintain my pre-Jekyll site in case I broke something (Note to Github: why can't pages run off a different branch than master???). At this point, I realized that there wasn't really a practical need for me to develop an entire theme, since everything is basically custom-developed for my site as is. But I decided that I had committed to a project and even though the scope changed, what I wanted most out of it was the experience, not necessarily the end product. So I pushed on.
 
-## WORK IN PROGRESS
+I further refactored my code and introduced a generic section function that could generate a home page like mine with any generic sections. I also tried to reduce redundancy and standardize my icons, but at this point I realized it was going to be difficult to generate an icon framework that would actually meet what a developer would require, made even more difficult by the fact that I don't have any requirements to work by. I drew a line here on how much further I would tinker with the theme; instead, I just noted some ideas down in hopes that they'll be more properly developed someday when they are needed (its open source y'all :^)). With the line drawn, it was pretty simple at this point to move any files specific my site into its own repo and just keeping all of the generic components in the theme. Bugs and glitches aside, the theme was functionally complete, and I finally published my [first Ruby gem](https://rubygems.org/gems/reality-blue-jekyll-theme).
 
-* Cleaning things out of template
-* Cleaning template files out of site repository
+The final step was to add my theme as a dependency to my site and do one last cleanup of unnecessary files. It was at this point where I found that, once again, Github likes to operate its own terms, and I would need to use the [jekyll-remote-theme](https://github.blog/2017-11-29-use-any-theme-with-github-pages/) plugin. This plugin actually loads the theme directly from its repository instead of the Ruby gem, so there was another step that was completely unnecessary (but hey, like I said, its about the journey, right? Publishing a gem was a lot simpler than I expected). 
 
-## FUTURE WORK
+I hope this post was useful or at least entertaining, if not too rambly. As my first personal dev project in a good number of years, I'm glad I sat down to really learn something new and work on something that was fueled only by my own interest and motivation. Hope to see more posts like this in the future :) Throwing some miscellaneous notes to self below:
+
+## FUTURE WORK TO BE DONE
 - Add pagination to projects
-- Further standardize components
 - Add better post tag/category functionality
-- Firefox is still kinda glitchy
+- Firefox is still a bit glitchy. There's probably some framework out there I can use to smooth out my animations
+- Figure out a way to standardize icon use for the theme
+- Add scalable section count
+- Cleanup hard-coded sizing and add some media queries; I could definitely use a lesson in responsive tools and best practices
