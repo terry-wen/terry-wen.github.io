@@ -1,0 +1,43 @@
+$sprite-icons: 'art.png', 'battery-boy.gif', 'boffee.gif', 'climb.png', 'cook.png', 'desert-hacks.gif', 'dev.png', 'gamer.png', 'github.png', 'instagram.png', 'linkedin.png', 'music.png', 'qwq.gif', 'reality-blue.gif', 'study-genie.gif', 'twitter.png';
+
+// Set each image to a background class
+@mixin sprite-icon-backgrounds {
+    @each $sprite in $sprite-icons {
+        $sprite-name: str-slice($sprite, 1, str-index($sprite, '.') - 1);
+        .icon.#{$sprite-name} { background-image: url(../assets/img/#{$sprite}); }
+    }
+}
+
+// Item/icon setup based on desired sizing
+@mixin item($itemSize, $perRow, $padding: 10) {
+    &.icon {
+        width: #{$itemSize}px;
+        height: #{$itemSize}px;
+        background-size: #{$itemSize * 2}px #{$itemSize}px;
+        &:hover {
+            background-position: -#{$itemSize}px 0;
+        }
+    }
+
+    &.item {
+        width: calc(100%/#{$perRow} - #{14 + $padding}px);
+        padding: #{$padding}px;
+    }
+}
+
+.item {
+    display: inline-block;
+    
+    .label {
+        @include width-fit-content();
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+.icon {
+    display: block;
+    margin: 0 auto;
+}
+
+@include sprite-icon-backgrounds();
