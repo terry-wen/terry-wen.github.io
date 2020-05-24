@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rebuilding my site with Jekyll - WIP"
+title:  "Rebuilding my site with Jekyll"
 date:   2020-05-16 21:41:04 -0700
 tags:   development
 ---
