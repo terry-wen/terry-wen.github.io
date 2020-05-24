@@ -1,13 +1,7 @@
 ---
 ---
-@charset "utf-8";
-
-// Import partials
-@import "reality-blue";
+@import 'reality-blue';
 @import 'icons';
-
-// Set up nav
-@include nav({{ site.sections.size }})
 
 // Set up icon types
 {% for iconType in site.icons %}
