@@ -9,6 +9,12 @@ layout: page
     weekly!</p>
 <br />
 <ul>
+    <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=bc9b72614e">Issue #8 –
+            06/05/2020</a> </li>
+    <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=bbbbdf8d83">Issue #7 –
+            06/03/2020</a> </li>
+    <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=b6bb3d3369">Issue #6.5 –
+            06/01/2020</a> </li>
     <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=c34b4af376">Issue #6 –
             05/29/2020</a> </li>
     <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=3f361bafd7">Issue #5 –
