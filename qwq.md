@@ -9,6 +9,18 @@ layout: page
     weekly!</p>
 <br />
 <ul>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=dc82b1210c">Issue #14 –
+            06/19/2020</a> </li>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=c5d603e7dd">Issue #13 –
+            06/17/2020</a> </li>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=af0ecd1c75">Issue #12 –
+            06/15/2020</a> </li>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=66d008f4c8">Issue #11 –
+            06/12/2020</a> </li>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=faa1d8f23b">Issue #10 –
+            06/10/2020</a> </li>
+	<li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=19106f5388">Issue #9 –
+            06/08/2020</a> </li>
     <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=bc9b72614e">Issue #8 –
             06/05/2020</a> </li>
     <li><a href="https://us18.campaign-archive.com/?u=db243fb6188e96b64d90183a2&id=bbbbdf8d83">Issue #7 –
