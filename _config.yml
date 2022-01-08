@@ -24,12 +24,12 @@ remote_theme: terry-wen/reality-blue@0.1.2
 title: Terry Wen
 author: Terry Wen
 sections:
-    - name: about
-      file: about.html
-    - name: blog
-      file: blog.html
-    - name: projects
-      file: projects.html
+    - name: 
+      file: links.html
+    - name: links
+      file: links.html
+    - name: 
+      file: links.html
 icons:
     - name: about
       perRow: 3
