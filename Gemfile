@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-gem "github-pages", "~>	204", group: :jekyll_plugins
+gem "github-pages", "~>	227", group: :jekyll_plugins
 
 # Jekyll plugins
 group :jekyll_plugins do
