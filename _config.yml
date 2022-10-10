@@ -18,18 +18,18 @@ plugins:
 paginate: 5
 
 # Theme
-remote_theme: terry-wen/reality-blue@0.1.2
+remote_theme: terry-wen/reality-blue@0.1.3
 
 # Site Settings
 title: terry wen
 author: Terry Wen
 sections:
-    - name: 
-      file: links.html
-    - name: links
-      file: links.html
-    - name: 
-      file: links.html
+    - name:
+      file: about.html
+    - name: about
+      file: about.html
+    - name:
+      file: about.html
 icons:
     - name: about
       perRow: 3
