@@ -1,0 +1,76 @@
+header {
+    text-align: center;
+    color: #eee;
+}
+
+.header-img {
+    background-image: url(../../../assets/img/battery-boy.gif);
+    width: 192px;
+    height: 192px;
+    background-size: 384px 192;
+    background-position: -192px 0;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.schedule h2 span {
+    float: right;
+    color: black;
+}
+
+.schedule .row {
+    margin: 0 auto;
+    max-width: 90%;
+}
+  
+.sched-col {
+    float: left;
+    padding: 0 40px 20px;
+    text-align: left;
+    width: 50%;
+}
+
+.sched-col h1 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.scores h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.scores h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+.scores img {
+    height: 50px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.scoreboard-select {
+    margin-bottom: 20px;
+}
+
+.scoreboard-select select {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center
+}
+
+.hidden {
+    display: none;
+}
