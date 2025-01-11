@@ -7,7 +7,7 @@ header {
     background-image: url(../../../assets/img/battery-boy.gif);
     width: 192px;
     height: 192px;
-    background-size: 384px 192;
+    background-size: 384px 192px;
     background-position: -192px 0;
 }
 
@@ -22,12 +22,12 @@ header {
     font-weight: normal;
 }
 
-.schedule h2 span {
+.schedule .right-align h2 span {
     float: right;
     color: black;
 }
 
-.schedule .row {
+.row {
     margin: 0 auto;
     max-width: 90%;
 }
@@ -42,6 +42,70 @@ header {
 .sched-col h1 {
     text-align: center;
     font-size: 24px;
+}
+
+.score-col {
+    float: left;
+    padding: 5px 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.score-col span:not(.anchor) {
+    float: right;
+    height: 27px;
+}
+
+.rank {
+    padding: 0 20px 0 0;
+    font-weight: bold;
+}
+
+.medals {
+    width: 50px;
+    margin: auto;
+    display: inline-block;
+    text-align:center;
+}
+
+.medals img {
+    height: 25px;
+    display: block;
+    margin: auto;
+}
+
+.score-col h2 {
+    margin: 0;
+}
+
+.score-row {
+    padding: 0 20px;
+}
+
+.score-row-top {
+    background-color: #fff7ac;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+.score-row-0 {
+    background-color: #eeeeee;
+}
+
+.score-row-1 {
+    background-color: #eeeeee;
+}
+
+.score-row-gold {
+    background-color: #ffe86b;
+}
+
+.score-row-silver {
+    background-color: #c2c0c0;
+}
+
+.score-row-bronze {
+    background-color: #b57d47;
 }
 
 .scores h1 {
@@ -65,6 +129,11 @@ header {
     margin-bottom: 20px;
 }
 
+.scoreboard-select .center {
+    display:flex;
+    width: fit-content;
+}
+
 .scoreboard-select select {
     font-size: 20px;
     font-weight: bold;
@@ -73,4 +142,21 @@ header {
 
 .hidden {
     display: none;
+}
+
+#refresh {
+    height: 22px;
+    width: 22px;
+    margin: auto 5px;
+    background-image: url(../../images/refresh.png);
+    background-size: 22px 22px;
+}
+
+#refresh:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.rotate {
+    background-image: url(../../images/loading.gif) !important;
 }

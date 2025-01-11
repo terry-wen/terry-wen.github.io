@@ -51,7 +51,7 @@
 						</div>
 						<div class="section-content">
 							<div class="row">
-								<div class="sched-col">
+								<div class="sched-col right-align">
 									<h1>Saturday, January 18</h1>
 									<h2><b>Roll Call</b><span>1:00PM</span></h2>
 									<h2>VALORANT<span>1:30PM</span></h2>
@@ -61,7 +61,7 @@
 									<h2>Chess<span>7:30PM</span></h2>
 									<h2>Teamfight Tactics<span>8:15PM</span></h2>
 								</div>
-								<div class="sched-col">
+								<div class="sched-col right-align">
 									<h1>Sunday, January 19</h1>
 									<h2><b>Roll Call</b><span>12:00PM</span></h2>
 									<h2>Marvel Rivals<span>12:30PM</span></h2>
@@ -82,60 +82,67 @@
 				<div class="container">
 					<div class="section-header">
 						<h1 class="schedule-header">Scoreboard</h1>
+						<div class="scoreboard-select">
+							<div class="center">
+								<select id="ss">
+									<option value="0">Overall</option>
+									<option value="11">Individual</option>
+									<option value="1">VALORANT</option>
+									<option value="2">Codenames</option>
+									<option value="3">Crab Game</option>
+									<option value="5">Teamfight Tactics</option>
+									<option value="6">Marvel Rivals</option>
+									<option value="7">Gartic.io</option>
+									<option value="8">Dress to Impress</option>
+									<option value="10">League of Legends</option>
+								</select>
+								<div id="refresh"></div>
+							</div>
+						</div>
 					</div>
 					<div class="section-content">
-						<div class="scoreboard-select">
-							<select id="ss">
-								<option value="0">Overall</option>
-								<option value="1">VALORANT</option>
-								<option value="2">Codenames</option>
-								<option value="3">Crab Game</option>
-								<option value="5">Teamfight Tactics</option>
-								<option value="6">Marvel Rivals</option>
-								<option value="7">Gartic.io</option>
-								<option value="8">Dress to Impress</option>
-								<option value="10">League of Legends</option>
-							</select>
-						</div>
 						<div id="scoreboard-0" class="row active">
 							<div class="sched-col scores">
 								<h1>Team 1</h1>
-								<h1>0</h1>
-								<h2><img src="images/gold.png" alt="gold"/>0</h2>
-								<h2><img src="images/silver.webp" alt="silver"/>0</h2>
-								<h2><img src="images/bronze.webp" alt="bronze"/>0</h2>
+								<h1 id="team-1-total">0</h1>
+								<h2><img src="images/gold.png" alt="gold"/><span id="team-1-gold">0</span></h2>
+								<h2><img src="images/silver.webp" alt="silver"/><span id="team-1-silver">0</span></h2>
+								<h2><img src="images/bronze.webp" alt="bronze"/><span id="team-1-bronze">0</span></h2>
 							</div>
 							<div class="sched-col scores">
 								<h1>Team 2</h1>
-								<h1>0</h1>
-								<h2><img src="images/gold.png" alt="gold"/> 0</h2>
-								<h2><img src="images/silver.webp" alt="silver"/> 0</h2>
-								<h2><img src="images/bronze.webp" alt="bronze"/> 0</h2>
+								<h1 id="team-2-total">0</h1>
+								<h2><img src="images/gold.png" alt="gold"/> <span id="team-2-gold">0</span></h2>
+								<h2><img src="images/silver.webp" alt="silver"/> <span id="team-2-silver">0</span></h2>
+								<h2><img src="images/bronze.webp" alt="bronze"/> <span id="team-2-bronze">0</span></h2>
 							</div>
 						</div>
+						<div id="scoreboard-11" class="row hidden">
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
 						<div id="scoreboard-1" class="row hidden">
-							valo
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-2" class="row hidden">
-							cn
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-3" class="row hidden">
-							cg
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-5" class="row hidden">
-							tft
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-6" class="row hidden">
-							mr
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-7" class="row hidden">
-							gt
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-8" class="row hidden">
-							dti
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 						<div id="scoreboard-10" class="row hidden">
-							league
+							<div class="center"><b>No scores yet!</b></div>
 						</div>
 					</div>
 				</div>
@@ -149,5 +156,6 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/custom.js"></script>
+		<script type="module" src="assets/js/db.js"></script>
 	</body>
 </html>

@@ -476,10 +476,6 @@ input, textarea {
 			margin-left: -25px;
 		}
 
-			.row > * {
-				padding: 25px 0 0 25px;
-			}
-
 			.row.gtr-uniform {
 				margin-top: -25px;
 			}
@@ -718,11 +714,6 @@ input, textarea {
 					margin-top: -25px;
 					margin-left: -25px;
 				}
-
-					.row > * {
-						padding: 25px 0 0 25px;
-					}
-
 					.row.gtr-uniform {
 						margin-top: -25px;
 					}
@@ -964,10 +955,6 @@ input, textarea {
 					margin-left: -25px;
 				}
 
-					.row > * {
-						padding: 25px 0 0 25px;
-					}
-
 					.row.gtr-uniform {
 						margin-top: -25px;
 					}
@@ -1208,10 +1195,6 @@ input, textarea {
 					margin-top: -25px;
 					margin-left: -25px;
 				}
-
-					.row > * {
-						padding: 25px 0 0 25px;
-					}
 
 					.row.gtr-uniform {
 						margin-top: -25px;
@@ -1574,7 +1557,6 @@ input, textarea {
 		outline: 0;
 		cursor: pointer;
 		border-radius: 8px;
-		text-shadow: -1px -1px 0.5px rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.75);
 		background-color: #43B3E0;
@@ -1764,18 +1746,15 @@ input, textarea {
 
 		.wrapper.style2 {
 			background-color: #fafafa;
-			text-shadow: 1px 1px 0px #fff;
 		}
 
 		.wrapper.style3 {
 			background-color: #fff7ac;
-			text-shadow: 1px 1px 0px #fff;
 		}
 
 		.wrapper.style4 {
 			background-color: #303030;
 			color: #999;
-			text-shadow: -1px -1px 0px #181818;
 		}
 
 			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
