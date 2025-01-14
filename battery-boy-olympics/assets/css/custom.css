@@ -34,9 +34,10 @@ header {
   
 .sched-col {
     float: left;
-    padding: 0 40px 20px;
+    padding: 20px 40px;
     text-align: left;
-    width: 50%;
+    width: 45%;
+    margin: 0 auto;
 }
 
 .sched-col h1 {
@@ -53,12 +54,15 @@ header {
 
 .score-col span:not(.anchor) {
     float: right;
-    height: 27px;
+    height: 10px;
 }
 
 .rank {
-    padding: 0 20px 0 0;
+    display: inline-block;
+    width: 30px;
+    padding: 0 10px 0 0;
     font-weight: bold;
+    text-align: right;
 }
 
 .medals {
@@ -80,6 +84,7 @@ header {
 
 .score-row {
     padding: 0 20px;
+    height: 25px;
 }
 
 .score-row-top {
@@ -106,6 +111,19 @@ header {
 
 .score-row-bronze {
     background-color: #b57d47;
+}
+
+.team-1 {
+    background-color: #cdf8fa;
+}
+
+.team-2 {
+    background-color: #ffc0aa;
+}
+
+.scores {
+    border: 1px solid black;
+    margin: 20px auto;
 }
 
 .scores h1 {
@@ -160,3 +178,7 @@ header {
 .rotate {
     background-image: url(../../images/loading.gif) !important;
 }
+
+@media (max-width: 850px) {
+    .sched-col {
+      width: 100%; }}

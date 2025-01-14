@@ -36,9 +36,12 @@ function refresh() {
   };
   get(child(db, `players/`)).then((snapshot) => {
     if (snapshot.exists()) {
-      snapshot.val().forEach((p) => {
-        players[p.id] = p;
-      })
+      for(const [key, value] of Object.entries(snapshot.val())) {
+        players[key] = value;
+        players[key].gold = 0
+        players[key].silver = 0
+        players[key].bronze = 0
+      }
       console.log(players)
       get(child(db, `scores/`)).then((snapshot) => {
         if (snapshot.exists()) {
@@ -60,23 +63,29 @@ function refresh() {
             scores[i]?.sort((a, b) => {
               return b.score - a.score;
             })
+            var lastRank = 0;
+            var lastScore = 1000000;
             scores[i]?.forEach((s, i) => {
               if (!!s.player) {
                 var tag = i%2;
-                if (i == 0) {
+                if (lastScore > s.score) {
+                  lastScore = s.score
+                  lastRank++
+                }
+                if (lastRank == 1) {
                   teamTotals[players[s.player].team].gold += 1;
                   players[s.player].gold = (players[s.player].gold ? players[s.player].gold : 0) + 1
                   tag = "gold"
-                } else if (i == 1) {
+                } else if (lastRank == 2) {
                   teamTotals[players[s.player].team].silver += 1;
                   players[s.player].silver = (players[s.player].silver ? players[s.player].silver : 0) + 1
                   tag = "silver"
-                } else if (i == 2) {
+                } else if (lastRank == 3) {
                   teamTotals[players[s.player].team].bronze += 1;
                   players[s.player].bronze = (players[s.player].bronze ? players[s.player].bronze : 0) + 1
                   tag = "bronze"
                 }
-                content += `<h2 class="score-row score-row-${tag}"><span class="rank anchor">${i+1}</span>${players[s.player].name}<span>${s.score}</span></h2>`
+                content += `<h2 class="score-row score-row-${tag}"><span class="rank anchor">${lastRank}</span>${players[s.player].name}<span>${s.score}</span></h2>`
               } else {
                 teamTotals[s.winner].total += 1
               }
@@ -90,27 +99,38 @@ function refresh() {
             $(`#team-${i}-silver`).text(teamTotals[i].silver)
             $(`#team-${i}-bronze`).text(teamTotals[i].bronze)
           }
-          var playerArray = Object.values(players)
-          if (!!playerArray) {
-            playerArray.sort((a, b) => {
-              if (a.gold != b.gold) {
-                return b.gold - a.gold 
-              }
-              if (a.silver != b.silver) {
-                return b.silver = a.silver
-              }
-              return b.bronze - a.bronze
-            })
-            var content = `<div class="score-col">`
-            content += `<h2 class="score-row score-row-top"><span class="rank anchor">#</span><b>Name</b><span><span class="medals anchor"><img src="images/gold.png" alt="gold"/></span><span class="medals anchor"><img src="images/silver.webp" alt="silver"/></span><span class="medals anchor"><img src="images/bronze.webp" alt="bronze anchor"/></span></span></h2>`
-            playerArray.forEach((p) => {
-              content += `<h2 class="score-row score-row-${i%2}"><span class="rank anchor">${i+1}</span>${p.name}<span><span class="medals anchor">${p.gol || 0}</span><span class="medals anchor">${p.silver || 0}</span><span class="medals anchor">${p.bronze || 0}</span></span></h2>`
-            })
-            content += "</div>"
-            $(`#scoreboard-${11}`).html(content);
-          }
         } else {
           console.log("No data available");
+        }
+        var playerArray = Object.values(players)
+        if (!!playerArray) {
+          playerArray.sort((a, b) => {
+            if (a.gold != b.gold) {
+              return b.gold - a.gold 
+            }
+            if (a.silver != b.silver) {
+              return b.silver - a.silver
+            }
+            if (b.bronze != a.bronze) {
+              return b.bronze - a.bronze
+            }
+            return a.name.localeCompare(b.name)
+          })
+          console.log(playerArray)
+          var content = `<div class="score-col">`
+          content += `<h2 class="score-row score-row-top"><span class="rank anchor">#</span><b>Name</b><span><span class="medals anchor"><img src="images/gold.png" alt="gold"/></span><span class="medals anchor"><img src="images/silver.webp" alt="silver"/></span><span class="medals anchor"><img src="images/bronze.webp" alt="bronze anchor"/></span></span></h2>`
+          var lastRank = 0;
+          var lastScore = 10000;
+          playerArray.forEach((p) => {
+            var score = p.gold * 100 + p.silver * 10 + p.bronze
+            if (score < lastScore) {
+              lastScore = score
+              lastRank++
+            }
+            content += `<h2 class="score-row team-${p.team}"><span class="rank anchor">${lastRank}</span>${p.name}<span><span class="medals anchor">${p.gold}</span><span class="medals anchor">${p.silver}</span><span class="medals anchor">${p.bronze}</span></span></h2>`
+          })
+          content += "</div>"
+          $(`#scoreboard-${11}`).html(content);
         }
         $("#refresh").removeClass("rotate")
       }).catch((error) => {
