@@ -34,7 +34,7 @@ header {
   
 .sched-col {
     float: left;
-    padding: 20px 40px;
+    padding: 20px 40px 0;
     text-align: left;
     width: 45%;
     margin: 0 auto;
@@ -124,6 +124,11 @@ header {
 .scores {
     border: 1px solid black;
     margin: 20px auto;
+}
+
+.winner {
+    box-sizing: border-box;
+    border: 5px solid gold;
 }
 
 .scores h1 {

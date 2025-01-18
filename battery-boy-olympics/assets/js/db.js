@@ -14,6 +14,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = ref(getDatabase(app));
 
+const teamName = {
+  1: "위국",
+  2: "<s>tommy</s>",
+}
+
 // Get a database reference to our posts
 function refresh() {
   $("#refresh").addClass("rotate")
@@ -54,18 +59,23 @@ function refresh() {
           })
           console.log(scores)
     
-          for (var i = 1; i <= 10; i++) {
-            if (scores[i] === undefined) {
+          for (var g = 1; g <= 10; g++) {
+            if (scores[g] === undefined) {
               continue;
             }
             var content = `<div class="score-col">`
             content += `<h2 class="score-row score-row-top"><span class="rank anchor">#</span><b>Name</b><span><b>Score</b></span></h2>`
-            scores[i]?.sort((a, b) => {
+            scores[g]?.sort((a, b) => {
               return b.score - a.score;
             })
             var lastRank = 0;
             var lastScore = 1000000;
-            scores[i]?.forEach((s, i) => {
+            var teams = {
+              1: "0",
+              2: "0",
+            }
+            var winner = 0;
+            scores[g]?.forEach((s, i) => {
               if (!!s.player) {
                 var tag = i%2;
                 if (lastScore > s.score) {
@@ -85,13 +95,31 @@ function refresh() {
                   players[s.player].bronze = (players[s.player].bronze ? players[s.player].bronze : 0) + 1
                   tag = "bronze"
                 }
-                content += `<h2 class="score-row score-row-${tag}"><span class="rank anchor">${lastRank}</span>${players[s.player].name}<span>${s.score}</span></h2>`
+                content += `<h2 class="score-row score-row-${tag}"><span class="rank anchor">${lastRank}</span>[${teamName[players[s.player].team]}] ${players[s.player].name}<span>${s.score}</span></h2>`
               } else {
-                teamTotals[s.winner].total += 1
+                if (!!s.score) { 
+                  teams[s.winner] = s.score
+                } else {
+                  teamTotals[s.winner].total += 1
+                  winner = s.winner
+                }
               }
             })
             content += "</div>"
-            $(`#scoreboard-${i}`).html(content);
+            var fullContent = `
+							<div class="sched-col scores team-1 ${winner === 1 ? "winner" : ""}">
+								<h1>위국</h1>
+								<h1 id="team-1-1">${teams[1]}</h1>
+								</div>
+							<div class="sched-col scores team-2 ${winner === 2 ? "winner" : ""}">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-1">${teams[2]}</h1>
+								</div>
+            `
+            if (g != 4 && g != 9) {
+              fullContent += content
+            }
+            $(`#scoreboard-${g}`).html(fullContent);
           }
           for (var i = 1; i < 2; i++) {
             $(`#team-${i}-total`).text(teamTotals[i].total)
