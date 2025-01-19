@@ -47,17 +47,15 @@ function refresh() {
         players[key].silver = 0
         players[key].bronze = 0
       }
-      console.log(players)
       get(child(db, `scores/`)).then((snapshot) => {
         if (snapshot.exists()) {
-          snapshot.val().forEach((s) => {
+          Object.values(snapshot.val()).forEach((s) => {
             if (!!scores[s.game]) {
               scores[s.game].push(s)
             } else {
               scores[s.game] = [s]
             }
           })
-          console.log(scores)
     
           for (var g = 1; g <= 10; g++) {
             if (scores[g] === undefined) {
@@ -66,7 +64,7 @@ function refresh() {
             var content = `<div class="score-col">`
             content += `<h2 class="score-row score-row-top"><span class="rank anchor">#</span><b>Name</b><span><b>Score</b></span></h2>`
             scores[g]?.sort((a, b) => {
-              return b.score - a.score;
+              return (b.score || 0) - (a.score || 0);
             })
             var lastRank = 0;
             var lastScore = 1000000;
@@ -78,6 +76,8 @@ function refresh() {
             scores[g]?.forEach((s, i) => {
               if (!!s.player) {
                 var tag = i%2;
+                console.log(s)
+                console.log(lastScore)
                 if (lastScore > s.score) {
                   lastScore = s.score
                   lastRank++
@@ -121,7 +121,8 @@ function refresh() {
             }
             $(`#scoreboard-${g}`).html(fullContent);
           }
-          for (var i = 1; i < 2; i++) {
+          console.log(teamTotals);
+          for (var i = 1; i <= 2; i++) {
             $(`#team-${i}-total`).text(teamTotals[i].total)
             $(`#team-${i}-gold`).text(teamTotals[i].gold)
             $(`#team-${i}-silver`).text(teamTotals[i].silver)
@@ -144,7 +145,6 @@ function refresh() {
             }
             return a.name.localeCompare(b.name)
           })
-          console.log(playerArray)
           var content = `<div class="score-col">`
           content += `<h2 class="score-row score-row-top"><span class="rank anchor">#</span><b>Name</b><span><span class="medals anchor"><img src="images/gold.png" alt="gold"/></span><span class="medals anchor"><img src="images/silver.webp" alt="silver"/></span><span class="medals anchor"><img src="images/bronze.webp" alt="bronze anchor"/></span></span></h2>`
           var lastRank = 0;
