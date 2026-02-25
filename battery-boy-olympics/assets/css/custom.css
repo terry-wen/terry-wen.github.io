@@ -1,189 +1,200 @@
 header {
-    text-align: center;
-    color: #eee;
+  text-align: center;
+  color: #eee;
 }
 
 .header-img {
-    background-image: url(../../../assets/img/battery-boy.gif);
-    width: 192px;
-    height: 192px;
-    background-size: 384px 192px;
-    background-position: -192px 0;
+  background-image: url(../../../assets/img/battery-boy.gif);
+  width: 192px;
+  height: 192px;
+  background-size: 384px 192px;
+  background-position: -192px 0;
 }
 
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .schedule h2 {
-    font-size: 16px;
-    font-weight: normal;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .schedule .right-align h2 span {
-    float: right;
-    color: black;
+  float: right;
+  color: black;
 }
 
 .row {
-    margin: 0 auto;
-    max-width: 90%;
+  margin: 0 auto;
+  max-width: 90%;
 }
-  
+
 .sched-col {
-    float: left;
-    padding: 20px 40px 0;
-    text-align: left;
-    width: 45%;
-    margin: 0 auto;
+  float: left;
+  padding: 20px 40px 0;
+  text-align: left;
+  width: 45%;
+  margin: 0 auto;
 }
 
 .sched-col h1 {
-    text-align: center;
-    font-size: 24px;
+  text-align: center;
+  font-size: 24px;
 }
 
 .score-col {
-    float: left;
-    padding: 5px 20px;
-    text-align: left;
-    width: 100%;
+  float: left;
+  padding: 5px 20px;
+  text-align: left;
+  width: 100%;
 }
 
 .score-col span:not(.anchor) {
-    float: right;
-    height: 10px;
+  float: right;
+  height: 10px;
 }
 
 .rank {
-    display: inline-block;
-    width: 30px;
-    padding: 0 10px 0 0;
-    font-weight: bold;
-    text-align: right;
+  display: inline-block;
+  width: 30px;
+  padding: 0 10px 0 0;
+  font-weight: bold;
+  text-align: right;
 }
 
 .medals {
-    width: 50px;
-    margin: auto;
-    display: inline-block;
-    text-align:center;
+  width: 50px;
+  margin: auto;
+  display: inline-block;
+  text-align: center;
 }
 
 .medals img {
-    height: 25px;
-    display: block;
-    margin: auto;
+  height: 25px;
+  display: block;
+  margin: auto;
 }
 
 .score-col h2 {
-    margin: 0;
+  margin: 0;
 }
 
 .score-row {
-    padding: 0 20px;
-    height: 25px;
+  padding: 0 20px;
+  height: 25px;
 }
 
 .score-row-top {
-    background-color: #fff7ac;
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
+  background-color: #fff7ac;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
 }
 
 .score-row-0 {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .score-row-1 {
-    background-color: #eeeeee;
+  background-color: #eeeeee;
 }
 
 .score-row-gold {
-    background-color: #ffe86b;
+  background-color: #ffe86b;
 }
 
 .score-row-silver {
-    background-color: #c2c0c0;
+  background-color: #c2c0c0;
 }
 
 .score-row-bronze {
-    background-color: #b57d47;
+  background-color: #b57d47;
 }
 
 .team-1 {
-    background-color: #cdf8fa;
+  background-color: #cdf8fa;
 }
 
 .team-2 {
-    background-color: #ffc0aa;
+  background-color: #ffc0aa;
 }
 
 .scores {
-    border: 1px solid black;
-    margin: 20px auto;
+  border: 1px solid black;
+  margin: 20px auto;
 }
 
 .winner {
-    box-sizing: border-box;
-    border: 5px solid gold;
+  box-sizing: border-box;
+  border: 5px solid gold;
 }
 
 .scores h1 {
-    font-size: 40px;
-    font-weight: bold;
+  font-size: 40px;
+  font-weight: bold;
 }
 
 .scores h2 {
-    font-weight: bold;
-    text-align: center;
-    font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
 }
 
 .scores img {
-    height: 50px;
-    padding: 5px;
-    vertical-align: middle;
+  height: 50px;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.schedule-header {
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.scoreboard {
+  color: #eee;
 }
 
 .scoreboard-select {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .scoreboard-select .center {
-    display:flex;
-    width: fit-content;
+  display: flex;
+  width: fit-content;
 }
 
 .scoreboard-select select {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 #refresh {
-    height: 22px;
-    width: 22px;
-    margin: auto 5px;
-    background-image: url(../../images/refresh.png);
-    background-size: 22px 22px;
+  height: 22px;
+  width: 22px;
+  margin: auto 5px;
+  background-image: url(../../images/refresh.png);
+  background-size: 22px 22px;
 }
 
 #refresh:hover {
-    opacity: 50%;
-    cursor: pointer;
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .rotate {
-    background-image: url(../../images/loading.gif) !important;
+  background-image: url(../../images/loading.gif) !important;
 }
 
 @media (max-width: 850px) {
-    .sched-col {
-      width: 100%; }}
+  .sched-col {
+    width: 100%;
+  }
+}
