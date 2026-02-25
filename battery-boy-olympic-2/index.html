@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Battery Boy Olympics 2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href="../assets/img/favicon.ico" rel="icon" type="image/png">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">BBO</a></li>
+					<li><a href="#schedule">Schedule</a></li>
+					<li><a href="#scoreboard">Scoreboard</a></li>
+					<li><a href="https://docs.google.com/document/d/14OzO3Y6ZZ026rUViVr3FdW_oMtkKWxgkWz2OE5CgFg0/edit?usp=sharing" target="_blank">Rulebook</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="center header-img"></div>
+						</div>
+						<div class="col-12">
+							<header>
+								<h1><strong>Battery Boy Olympics 2</strong></h1>
+								<h3>January 18 - 19, 2025</h3>
+							</header>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Schedule -->
+			<article id="schedule" class="wrapper style3 schedule">
+					<div class="container">
+						<div class="section-header">
+							<h1 class="schedule-header">Schedule</h1>
+							<p>Times are listed in PST.</p>
+						</div>
+						<div class="section-content">
+							<div class="row">
+								<div class="sched-col right-align">
+									<h1>Saturday, January 18</h1>
+									<h2><b>Roll Call</b><span>1:00PM</span></h2>
+									<h2>VALORANT<span>1:30PM</span></h2>
+									<h2>Codenames<span>4:00PM</span></h2>
+									<h2>Crab Game<span>5:15PM</span></h2>
+									<h2><b>BREAK</b><span>6:30PM</span></h2>
+									<h2>Chess<span>7:30PM</span></h2>
+									<h2>Teamfight Tactics<span>8:15PM</span></h2>
+								</div>
+								<div class="sched-col right-align">
+									<h1>Sunday, January 19</h1>
+									<h2><b>Roll Call</b><span>12:00PM</span></h2>
+									<h2>Marvel Rivals<span>12:30PM</span></h2>
+									<h2>Gartic.io<span>3:00PM</span></h2>
+									<h2>League of Legends (ARAM)<span>4:00PM</span></h2>
+									<h2><b>BREAK</b><span>6:30PM</span></h2>
+									<h2>Pico Park<span>7:30PM</span></h2>
+									<h2>Dress to Impress<span>8:30PM</span></h2>
+									<h2><b>Closing Ceremony</b><span>9:30PM</span></h2>
+								</div>
+							</div>
+						</div>
+					</div>
+			</article>
+
+			<!-- Scoreboard -->
+			<article id="scoreboard" class="wrapper style2 schedule">
+				<div class="container">
+					<div class="section-header">
+						<h1 class="schedule-header">Scoreboard</h1>
+						<div class="scoreboard-select">
+							<div class="center">
+								<select id="ss">
+									<option value="0">Overall</option>
+									<option value="11">Individual</option>
+									<option value="1">VALORANT</option>
+									<option value="2">Codenames</option>
+									<option value="3">Crab Game</option>
+									<option value="4">Chess</option>
+									<option value="5">Teamfight Tactics</option>
+									<option value="6">Marvel Rivals</option>
+									<option value="7">Gartic.io</option>
+									<option value="10">League of Legends</option>
+									<option value="9">Pico Park</option>
+									<option value="8">Dress to Impress</option>
+								</select>
+								<div id="refresh"></div>
+							</div>
+						</div>
+					</div>
+					<div class="section-content">
+						<div id="scoreboard-0" class="row active">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-total">0</h1>
+								<h2><img src="images/gold.png" alt="gold"/><span id="team-1-gold">0</span></h2>
+								<h2><img src="images/silver.webp" alt="silver"/><span id="team-1-silver">0</span></h2>
+								<h2><img src="images/bronze.webp" alt="bronze"/><span id="team-1-bronze">0</span></h2>
+							</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-total">0</h1>
+								<h2><img src="images/gold.png" alt="gold"/> <span id="team-2-gold">0</span></h2>
+								<h2><img src="images/silver.webp" alt="silver"/> <span id="team-2-silver">0</span></h2>
+								<h2><img src="images/bronze.webp" alt="bronze"/> <span id="team-2-bronze">0</span></h2>
+							</div>
+						</div>
+						<div id="scoreboard-11" class="row hidden">
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-1" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-1">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-1">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-2" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-2">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-2">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-3" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-3">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-3">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-4" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-4">0</h1>
+							</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-4">0</h1>
+							</div>
+						</div>
+						<div id="scoreboard-5" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-5">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-5">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-6" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-6">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-6">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-7" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-7">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-7">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-8" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-8">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-8">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+						<div id="scoreboard-9" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-9">0:00</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-9">0:00</h1>
+								</div>
+						</div>
+						<div id="scoreboard-10" class="row hidden">
+							<div class="sched-col scores team-1">
+								<h1>위국</h1>
+								<h1 id="team-1-10">0</h1>
+								</div>
+							<div class="sched-col scores team-2">
+								<h1><s>tommy</s></h1>
+								<h1 id="team-2-10">0</h1>
+								</div>
+							<div class="center"><b>No scores yet!</b></div>
+						</div>
+					</div>
+				</div>
+		</article>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/custom.js"></script>
+		<script type="module" src="assets/js/db.js"></script>
+	</body>
+</html>

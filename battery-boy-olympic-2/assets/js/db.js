@@ -15,8 +15,8 @@ const app = initializeApp(firebaseConfig);
 const db = ref(getDatabase(app));
 
 const teamName = {
-  1: "Team 2",
-  2: "Team 2",
+  1: "위국",
+  2: "<s>tommy</s>",
 }
 
 // Get a database reference to our posts
@@ -39,7 +39,7 @@ function refresh() {
       bronze: 0,
     }
   };
-  get(child(db, `players-2026/`)).then((snapshot) => {
+  get(child(db, `players/`)).then((snapshot) => {
     if (snapshot.exists()) {
       for(const [key, value] of Object.entries(snapshot.val())) {
         players[key] = value;
@@ -47,7 +47,7 @@ function refresh() {
         players[key].silver = 0
         players[key].bronze = 0
       }
-      get(child(db, `scores-2026/`)).then((snapshot) => {
+      get(child(db, `scores/`)).then((snapshot) => {
         if (snapshot.exists()) {
           Object.values(snapshot.val()).forEach((s) => {
             if (!!scores[s.game]) {
@@ -108,11 +108,11 @@ function refresh() {
             content += "</div>"
             var fullContent = `
 							<div class="sched-col scores team-1 ${winner === 1 ? "winner" : ""}">
-								<h1>${teamName[1]}</h1>
+								<h1>위국</h1>
 								<h1 id="team-1-1">${teams[1]}</h1>
 								</div>
 							<div class="sched-col scores team-2 ${winner === 2 ? "winner" : ""}">
-								<h1>${teamName[2]}</h1>
+								<h1><s>tommy</s></h1>
 								<h1 id="team-2-1">${teams[2]}</h1>
 								</div>
             `
