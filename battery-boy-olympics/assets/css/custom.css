@@ -114,15 +114,15 @@ header {
 }
 
 .team-1 {
-  background-color: #cdf8fa;
+  background-color: #a8dcf7;
 }
 
 .team-2 {
-  background-color: #ffc0aa;
+  background-color: #fc9990;
 }
 
 .scores {
-  border: 1px solid black;
+  border: 1px solid white;
   margin: 20px auto;
 }
 
@@ -155,6 +155,10 @@ header {
 
 .scoreboard {
   color: #eee;
+}
+
+.scores {
+  color: black;
 }
 
 .scoreboard-select {
