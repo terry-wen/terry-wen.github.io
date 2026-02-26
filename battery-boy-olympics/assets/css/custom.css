@@ -156,7 +156,7 @@ header {
 }
 
 .scoreboard {
-  color: #fff7ac;
+  color: #ddd;
 }
 
 .scores {
@@ -174,7 +174,7 @@ header {
 
 .scoreboard-select select {
   background-color: #ddd;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   text-align: center;
   border-radius: 3px;
@@ -185,11 +185,11 @@ header {
 }
 
 #refresh {
-  height: 22px;
-  width: 22px;
+  height: 15px;
+  width: 15px;
   margin: auto 5px;
   background-image: url(../../images/refresh.png);
-  background-size: 22px 22px;
+  background-size: 15px 15px;
 }
 
 #refresh:hover {
