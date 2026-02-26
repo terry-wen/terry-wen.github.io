@@ -90,7 +90,7 @@ header {
 
 .score-row-top {
   color: #282828;
-  background-color: #ddd;
+  background-color: #fff7ac;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
@@ -124,7 +124,7 @@ header {
 }
 
 .scores {
-  border: 1px solid white;
+  border-radius: 5px;
   margin: 20px auto;
 }
 
@@ -156,7 +156,7 @@ header {
 }
 
 .scoreboard {
-  color: #ddd;
+  color: #fff7ac;
 }
 
 .scores {

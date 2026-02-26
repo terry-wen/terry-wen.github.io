@@ -1906,12 +1906,12 @@ ul.actions li:first-child {
   transition: background-color 0.2s ease-in-out;
   position: relative;
   display: block;
-  color: #fff;
+  color: #fff7ac;
   text-decoration: none;
   outline: 0;
   font-weight: 600;
   border-radius: 8px;
-  color: #fff;
+  color: #fff7ac;
   height: 2.5em;
   line-height: 2.5em;
   padding: 0 1.25em;
