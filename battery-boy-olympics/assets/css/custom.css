@@ -1,6 +1,6 @@
 header {
   text-align: center;
-  color: #eee;
+  color: #ddd;
 }
 
 .header-img {
@@ -89,16 +89,18 @@ header {
 }
 
 .score-row-top {
-  background-color: #fff7ac;
-  border-bottom: solid black 1px;
+  color: #282828;
+  background-color: #ddd;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .score-row-0 {
-  background-color: #eeeeee;
+  background-color: #ddd;
 }
 
 .score-row-1 {
-  background-color: #eeeeee;
+  background-color: #ddd;
 }
 
 .score-row-gold {
@@ -154,7 +156,7 @@ header {
 }
 
 .scoreboard {
-  color: #eee;
+  color: #ddd;
 }
 
 .scores {
@@ -171,9 +173,11 @@ header {
 }
 
 .scoreboard-select select {
+  background-color: #ddd;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  border-radius: 3px;
 }
 
 .hidden {
