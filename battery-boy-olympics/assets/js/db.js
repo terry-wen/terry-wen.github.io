@@ -15,8 +15,8 @@ const app = initializeApp(firebaseConfig);
 const db = ref(getDatabase(app));
 
 const teamName = {
-  1: "Team 2",
-  2: "Team 2",
+  1: "ganja jorim",
+  2: "tommybigduck",
 }
 
 // Get a database reference to our posts
@@ -49,13 +49,49 @@ function refresh() {
       }
       get(child(db, `scores-2026/`)).then((snapshot) => {
         if (snapshot.exists()) {
-          Object.values(snapshot.val()).forEach((s) => {
-            if (!!scores[s.game]) {
-              scores[s.game].push(s)
+          for(const [name, ss] of Object.entries(snapshot.val())) {
+            if (!!players[name]) {
+              for(const [game, s] of Object.entries(ss)) {
+                if (!!scores[game]) {
+                  scores[game].push({
+                    player: name,
+                    score: s,
+                  })
+                } else {
+                  scores[game] = [{
+                    player: name,
+                    score: s,
+                  }]
+                }
+              }
             } else {
-              scores[s.game] = [s]
+              for(const [team, s] of Object.entries(ss)) {
+                if (team == "winner") {
+                  if (!!scores[name]) {
+                    scores[name].push({
+                      winner: s,
+                    })
+                  } else {
+                    scores[name] = [{
+                      winner: s,
+                    }]
+                  }
+                } else {
+                  if (!!scores[name]) {
+                    scores[name].push({
+                      winner: team,
+                      score: s,
+                    })
+                  } else {
+                    scores[name] = [{
+                      winner: team,
+                      score: s,
+                    }]
+                  }
+                }
+              }
             }
-          })
+          }
     
           for (var g = 1; g <= 10; g++) {
             if (scores[g] === undefined) {
@@ -76,8 +112,6 @@ function refresh() {
             scores[g]?.forEach((s, i) => {
               if (!!s.player) {
                 var tag = i%2;
-                console.log(s)
-                console.log(lastScore)
                 if (lastScore > s.score) {
                   lastScore = s.score
                   lastRank++
@@ -121,7 +155,6 @@ function refresh() {
             }
             $(`#scoreboard-${g}`).html(fullContent);
           }
-          console.log(teamTotals);
           for (var i = 1; i <= 2; i++) {
             $(`#team-${i}-total`).text(teamTotals[i].total)
             $(`#team-${i}-gold`).text(teamTotals[i].gold)

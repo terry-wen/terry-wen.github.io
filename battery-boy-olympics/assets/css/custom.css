@@ -85,11 +85,11 @@ header {
 .score-row {
   padding: 0 20px;
   height: 25px;
+  color: black;
 }
 
 .score-row-top {
   background-color: #fff7ac;
-  border-top: solid black 1px;
   border-bottom: solid black 1px;
 }
 
