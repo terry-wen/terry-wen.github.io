@@ -85,6 +85,7 @@ header {
 .score-row {
   padding: 0 20px;
   height: 25px;
+  border-top: 1px solid #282828;
   color: black;
 }
 
