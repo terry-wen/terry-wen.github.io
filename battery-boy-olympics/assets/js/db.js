@@ -150,7 +150,7 @@ function refresh() {
 								<h1 id="team-2-1">${teams[2]}</h1>
 								</div>
             `
-            if (g != 4 && g != 9) {
+            if (g != 4 && g != 8) {
               fullContent += content
             }
             $(`#scoreboard-${g}`).html(fullContent);
